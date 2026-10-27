@@ -24,8 +24,12 @@
             usuario.mostrarCiudad();
 
 
-            function greetings2() {
-                console.log("Nombre: " + this.nombre + " | Edad: " + this.edad);
+            function greetings2(val) {
+                console.log("Nombre: " + this.nombre + " | Edad: " + this.edad + " | Numero por parámetro: " + val);
+            }
+
+            function greetings3(contact, val) {
+                console.log("Nombre: " + contact.nombre + " | Edad: " + contact.edad + " | Numero por parámetro: " + val + " | Fecha: " + contact);
             }
 
             const contacto1 = { nombre: "Romualdo" };
@@ -38,9 +42,22 @@
             };
             
             contacto2.presentar = greetings2;
-            contacto2.presentar();
+            contacto2.presentar(9);
+            // contacto2.greetings2(8);
+
+            const alumno =  {
+                nombre: "Federico",
+                edad: 44,
+                date:  new Date()
+            }
+
+
+            greetings3(contacto2, 54);
+             greetings3(alumno, 54);
             
         }
+
+
     </script>
 </head>
 <body>
